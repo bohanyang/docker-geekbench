@@ -5,7 +5,7 @@ ARG GEEKBENCH_VERSION='4.3.3'
 RUN set -ex; \
     apt-get update; \
     apt-get install -y wget; \
-    wget -O 'Geekbench.tar.gz' "https://cdn.geekbench.com/Geekbench-$GEEKBENCH_VERSION-Linux.tar.gz"; \
+    wget -qO 'Geekbench.tar.gz' "https://cdn.geekbench.com/Geekbench-$GEEKBENCH_VERSION-Linux.tar.gz"; \
     apt-get purge -y --auto-remove wget; \
     tar -x -f 'Geekbench.tar.gz'; \
     rm 'Geekbench.tar.gz'; \
