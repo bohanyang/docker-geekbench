@@ -12,6 +12,4 @@ RUN deps='ca-certificates curl'; \
     rm 'Geekbench.tar.gz'; \
     mv "Geekbench-$GEEKBENCH_VERSION-Linux" '/root/Geekbench'
 
-WORKDIR /root/Geekbench
-
-CMD ["geekbench4"]
+CMD ["/root/Geekbench/geekbench4"]
