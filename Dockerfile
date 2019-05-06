@@ -2,12 +2,11 @@ FROM debian:stretch-slim
 
 ARG GEEKBENCH_VERSION='4.3.3'
 
-RUN deps='ca-certificates wget'; \
-    set -ex; \
+RUN set -ex; \
     apt-get update; \
-    apt-get install -y --no-install-recommends $deps; \
+    apt-get install -y wget; \
     wget -O 'Geekbench.tar.gz' "https://cdn.geekbench.com/Geekbench-$GEEKBENCH_VERSION-Linux.tar.gz"; \
-    apt-get purge -y --auto-remove $deps; \
+    apt-get purge -y --auto-remove wget; \
     tar -x -f 'Geekbench.tar.gz'; \
     rm 'Geekbench.tar.gz'; \
     mv "Geekbench-$GEEKBENCH_VERSION-Linux" '/root/Geekbench'
