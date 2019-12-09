@@ -11,4 +11,4 @@ RUN set -ex; \
     rm 'Geekbench.tar.gz'; \
     mv "Geekbench-$GEEKBENCH_VERSION-Linux" '/root/Geekbench'
 
-CMD ["/root/Geekbench/geekbench4"]
+CMD ["/root/Geekbench/geekbench5"]
