@@ -1,6 +1,6 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
-ARG GEEKBENCH_VERSION='4.3.3'
+ARG GEEKBENCH_VERSION='4.4.2'
 
 RUN set -ex; \
     apt-get update; \
