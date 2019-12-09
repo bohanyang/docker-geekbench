@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-ARG GEEKBENCH_VERSION='4.4.2'
+ARG GEEKBENCH_VERSION='5.0.4'
 
 RUN set -ex; \
     apt-get update; \
