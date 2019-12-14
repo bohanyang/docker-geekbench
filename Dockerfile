@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:stretch-slim
 
 ARG GEEKBENCH_VERSION='4.4.2'
 
